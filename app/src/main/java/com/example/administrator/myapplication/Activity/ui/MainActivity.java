@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     }
 
     private void initData() {
-
+        //hehe
     }
 
     private void initView() {
