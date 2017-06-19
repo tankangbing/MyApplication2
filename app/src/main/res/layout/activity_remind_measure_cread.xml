@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_creatmeasrue"
+            style="@style/Titletext"
+            android:text="创建测量提醒"
+
+            />
+        <ImageButton
+            android:id="@+id/im_cmr_pre"
+            android:background="#f781c3ec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/pre"
+            android:clickable="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/Time"
+            android:text="时间" />
+
+        <TextView
+            android:id="@+id/tv_creat_time"
+            style="@style/EtTime" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/Time"
+            android:text="重复" />
+
+        <TextView
+            android:id="@+id/tv_creat_repetition"
+            style="@style/EtTime" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_creat_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="取消"
+            android:textSize="22dp"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/btn_creat_save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="保存"
+            android:textSize="22dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+</LinearLayout>

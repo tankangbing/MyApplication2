@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d6f5e8"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_view_remind_measure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="05-22"
+            android:textSize="25dp"
+            android:textColor="#000"/>
+        <ImageButton
+            android:id="@+id/ib_delet"
+            android:background="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_uninstall"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_view_remind_measure_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="周一,周二,周一,周二"
+        android:textSize="12dp"
+        android:textColor="#000"/>
+
+
+
+
+</LinearLayout>

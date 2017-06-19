@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#f781c3ec"
+            style="@style/Titletext"
+            android:text="测量提醒"
+
+            />
+        <ImageButton
+            android:id="@+id/im_mr_pre"
+            style="@style/TitleImage"
+            android:src="@drawable/pre"
+            />
+        <ImageButton
+            android:id="@+id/im_mr_crea"
+            android:background="#f781c3ec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/addh"
+            android:clickable="true"/>
+    </RelativeLayout>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:text="设置测量提醒可以帮助您按时测量血压"
+      android:gravity="center"
+      android:textSize="17dp"
+      android:textColor="#2d96df" />
+
+    <ListView
+        android:id="@+id/lv_remind_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

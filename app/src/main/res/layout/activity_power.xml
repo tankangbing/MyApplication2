@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#f781c3ec"
+            style="@style/Titletext"
+            android:text="知识宝典"
+
+            />
+        <ImageButton
+            android:id="@+id/im_power_pre"
+            style="@style/TitleImage"
+            android:src="@drawable/pre"
+             />
+    </RelativeLayout>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/powe_webView"
+        />
+</LinearLayout>

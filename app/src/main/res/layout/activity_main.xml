@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+
+    <TextView
+        style="@style/Titletext"
+        android:text="血压管理助手"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+    <Button
+        android:id="@+id/btn_mreasure"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f781c3ec"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="测量血压"
+        android:textColor="#000"
+        android:textSize="20dp"
+        />
+
+    <TextView style="@style/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+
+        <Button
+            android:id="@+id/btn_curve"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f781c3ec"
+            android:gravity="center"
+            android:text="数据曲线"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_remind"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f781c3ec"
+            android:gravity="center"
+            android:text="用药提醒"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <TextView
+        style="@style/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f781c3ec"
+            android:gravity="center"
+            android:text="数据显示"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="设置"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:background="#f781c3ec"
+            />
+    </LinearLayout>
+    <TextView
+        style="@style/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_ii"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f781c3ec"
+            android:gravity="center"
+            android:text="个人信息"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_powerkm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="知识宝典"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:background="#f781c3ec"
+            />
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_guide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="使用指南"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:background="#f781c3ec"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="灵芝血压计V1.1.1"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColor="#000"
+        android:layout_marginTop="50dp"
+        />
+</LinearLayout>

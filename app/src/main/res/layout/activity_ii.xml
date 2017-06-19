@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#f781c3ec"
+            style="@style/Titletext"
+            android:text="个人信息"
+
+            />
+        <ImageButton
+            android:id="@+id/im_ge_pre"
+            style="@style/TitleImage"
+            android:src="@drawable/pre"
+            android:onClick="gebacke"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="姓   名："
+            style="@style/Ii"/>
+        <EditText
+            android:id="@+id/edt_ge_name"
+            style="@style/IiEt"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/Ii"
+            android:text="性   别："
+           />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:id="@+id/rg">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="男"
+            android:id="@+id/rb1"
+            android:checked="true"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="女"
+            android:id="@+id/rb2"
+            />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_ge_height"
+            style="@style/Ii"
+            android:text="身   高："
+       />
+        <EditText
+            android:id="@+id/edt_ge_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="decimal"
+            android:maxLength="3"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/tv_ge_height"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:textColor="#000"
+
+            />
+        <TextView
+            android:id="@+id/tv_cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="C M"
+            android:textSize="17dp"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_weight"
+            style="@style/Ii"
+            android:text="体   重："
+      />
+        <EditText
+            android:id="@+id/edt_ge_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="decimal"
+            android:maxLength="3"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/tv_weight"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:textColor="#000"
+
+            />
+        <TextView
+            android:id="@+id/tv_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="K G"
+            android:textSize="17dp"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/Ii"
+            android:text="生   日："/>
+
+        <EditText
+            android:id="@+id/edt_ge_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:textColor="#000"
+            android:numeric="decimal"
+            android:singleLine="true"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/Ii"
+            android:text="医   嘱："
+
+           />
+
+        <EditText
+            android:id="@+id/edt_ge_advice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:textColor="#000"
+            android:singleLine="true"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="保存"
+        android:textSize="17dp"
+        android:textColor="#000"
+        android:background="#63b2df"
+        android:onClick="save"/>
+
+</LinearLayout>

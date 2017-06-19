@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/Titletext"
+            android:text="数据曲线"
+
+            />
+        <ImageButton
+            android:id="@+id/im_qu_pre"
+            style="@style/TitleImage"
+            android:src="@drawable/pre"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7ecf1f4"
+        android:padding="2dp"
+        >
+
+        <TextView
+            android:id="@+id/te_curve_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7ecf1f4"
+            android:text="2017-04-25"
+            android:textColor="#80b1e1"
+            android:textSize="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginRight="50dp"
+            />
+
+        <TextView
+            android:id="@+id/te_curve_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#fff"
+            android:drawableRight="@drawable/drawer_arrow_down"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="早晨(06-08点)"
+            android:textSize="15dp"
+            android:clickable="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="2dp"
+        android:text="血压图/mmgh"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.example.administrator.myapplication.Activity.View.LineChartView
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:background="#ffffff"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="收缩压"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#FFCD41"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="舒张压"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#F70399F5"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="2dp"
+            android:text="心率/bmp"
+            android:textSize="15dp" />
+        <com.example.administrator.myapplication.Activity.View.LineChartView
+            android:id="@+id/line_xin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:background="#ffffff"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7ecf1f4"
+            >
+        <Button
+            android:id="@+id/te_curve_shangye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="#c8e3f4"
+            android:text="上一页"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:clickable="true"
+
+            />
+        <Button
+            android:id="@+id/te_curve_nextye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#c8e3f4"
+            android:text="下一页"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:clickable="true"
+
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
