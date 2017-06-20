@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:background="#f781c3ec"
             style="@style/Titletext"
             android:text="提醒管理"
 
@@ -17,6 +16,7 @@
             style="@style/TitleImage"
             android:src="@drawable/pre"
            />
+
     </RelativeLayout>
     <TextView style="@style/Line" />
     <RelativeLayout
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_mreasure_remind"
-            android:textColor="#000"
+            android:textColor="#494949"
             android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_eat_remind"
-            android:textColor="#000"
+            android:textColor="#494949"
             android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

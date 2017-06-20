@@ -77,10 +77,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#b9dcf1"
+            android:background="#06cea9"
             android:text="-"
             android:textSize="25dp"
-
+            android:textColor="#494949"
             />
 
         <TextView
@@ -89,6 +89,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+
             />
         <Button
             android:id="@+id/btny_add"
@@ -96,10 +97,10 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:text="+"
-            android:background="#b9dcf1"
+            android:background="#06cea9"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-
+            android:textColor="#494949"
             />
     </LinearLayout>
     <LinearLayout
@@ -116,7 +117,8 @@
             android:padding="10dp"
             android:text="取消"
             android:textSize="22dp"
-            android:textColor="#000"/>
+            android:textColor="#fff"
+            android:background="#04cea9"/>
 
         <Button
             android:id="@+id/btny_save"
@@ -124,8 +126,10 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:layout_marginLeft="10dp"
             android:text="保存"
             android:textSize="22dp"
-            android:textColor="#000"/>
+            android:textColor="#fff"
+            android:background="#04cea9"/>
     </LinearLayout>
 </LinearLayout>

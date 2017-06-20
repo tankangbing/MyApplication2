@@ -3,6 +3,7 @@ package com.example.administrator.myapplication.Activity.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import com.example.administrator.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     Button btn1, btn2,btn3, btn4,btn5, btn6,btn7, btn8;
+    private long exitTime = 0;
 //    Toast tst;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,8 +72,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     Toast.makeText(getApplicationContext(), "亲！还没数据，赶紧先去测量吧",Toast.LENGTH_SHORT ).show();
                     return;
                 }
-
-
                 break;
             case R.id.btn_show:
                 //展示数据
@@ -106,5 +106,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
     }
 
-
+    //返回键添加提醒
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis()-exitTime) > 2000){
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

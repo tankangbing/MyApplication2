@@ -28,7 +28,7 @@ import java.util.List;
 
 public class RemindEatActivity extends Activity implements View.OnClickListener{
     private ImageButton ibEatPre;
-    private ImageButton ibEatCreat;
+    private TextView ibEatCreat;
 
     private RemindEatDao remindEatDao;
     public RemindEatAdapter remindEatAdapter;
@@ -39,6 +39,8 @@ public class RemindEatActivity extends Activity implements View.OnClickListener{
     public static final String UPDATE = "update";
     private RemindEatInfo remindEatInfo;
     public static final String ALARM_ACTION = "com.eatt.alarm.clock";
+    private TextView mTvPre;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +53,11 @@ public class RemindEatActivity extends Activity implements View.OnClickListener{
     private void initView() {
         setContentView(R.layout.activity_eat_remind);
         ibEatPre = (ImageButton)findViewById(R.id.im_eat_pre) ;
-        ibEatCreat = (ImageButton)findViewById(R.id.im_eat_crea);
+        ibEatCreat = (TextView)findViewById(R.id.im_eat_crea);
         lvRemindEat = (ListView)findViewById(R.id.lv_remind_eat );
+        mTvPre = (TextView)findViewById(R.id.tv_eat_remind_pre);
 
+        mTvPre.setOnClickListener(this);
         ibEatPre.setOnClickListener(this);
         ibEatCreat.setOnClickListener(this);
     }
@@ -101,6 +105,9 @@ public class RemindEatActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.tv_eat_remind_pre:
+                Brack();
+                break;
             case R.id.im_eat_pre:
                 Brack();
                 break;

@@ -15,23 +15,26 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
 
+    <TextView style="@style/white" />
 
     <Button
         android:id="@+id/btn_mreasure"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#f781c3ec"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:background="#1683cf"
+        android:drawableTop="@drawable/index__icon_measuring"
         android:gravity="center"
+        android:paddingTop="2dp"
         android:text="测量血压"
-        android:textColor="#000"
-        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textSize="17dp"
         />
 
-    <TextView style="@style/white" />
-
+    <TextView
+        style="@style/white"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -46,26 +49,30 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#f781c3ec"
+            android:background="#956dab"
             android:gravity="center"
-            android:text="数据曲线"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:text="测量图表"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:drawableTop="@drawable/index__icon_chart"
+            android:paddingTop="2dp"/>
+
 
         <TextView
-            android:layout_width="5dp"
-            android:layout_height="match_parent" />
+            style="@style/shu"/>
 
         <Button
             android:id="@+id/btn_remind"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#f781c3ec"
+            android:background="#89d554"
+            android:drawableTop="@drawable/index__icon_remind"
             android:gravity="center"
-            android:text="用药提醒"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:paddingTop="2dp"
+            android:text="消息提醒"
+            android:textColor="#fff"
+            android:textSize="17dp"/>
     </LinearLayout>
     <TextView
         style="@style/white"/>
@@ -83,25 +90,30 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#f781c3ec"
+            android:background="#02cea8"
             android:gravity="center"
-            android:text="数据显示"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:text="测量记录"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:drawableTop="@drawable/index__icon_record"
+            android:paddingTop="2dp"/>
+
 
         <TextView
-            android:layout_width="5dp"
-            android:layout_height="match_parent" />
+            style="@style/shu"/>
+
         <Button
-            android:id="@+id/btn_set"
+            android:id="@+id/btn_powerkm"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="设置"
+            android:background="#ff85a2"
             android:gravity="center"
-            android:textSize="20dp"
-            android:textColor="#000"
-            android:background="#f781c3ec"
+            android:text="知识宝典"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:drawableTop="@drawable/index__icon_knowledge"
+            android:paddingTop="2dp"
             />
     </LinearLayout>
     <TextView
@@ -120,29 +132,39 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#f781c3ec"
+            android:background="#6ec5f3"
+            android:drawableTop="@drawable/index__icon_user"
             android:gravity="center"
+            android:paddingTop="2dp"
             android:text="个人信息"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:textColor="#fff"
+            android:textSize="17dp"/>
+
 
         <TextView
+            style="@style/shu"/>
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="5dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
+
         <Button
-            android:id="@+id/btn_powerkm"
+            android:id="@+id/btn_set"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="知识宝典"
+            android:background="#60d2e4"
+            android:drawableTop="@drawable/index__icon_set"
             android:gravity="center"
-            android:textSize="20dp"
-            android:textColor="#000"
-            android:background="#f781c3ec"
+            android:paddingTop="2dp"
+            android:text="设置"
+            android:textColor="#fff"
+            android:textSize="17dp"
             />
+
+
         <TextView
-            android:layout_width="5dp"
-            android:layout_height="match_parent" />
+            style="@style/shu"/>
         <Button
             android:id="@+id/btn_guide"
             android:layout_width="0dp"
@@ -151,21 +173,21 @@
             android:text="使用指南"
             android:gravity="center"
             android:textSize="20dp"
-            android:textColor="#000"
-            android:background="#f781c3ec"
+            android:textColor="#fff"
+            android:background="#e8bd23"
+            android:drawableTop="@drawable/index__icon_guide"
+            android:paddingTop="2dp"
             />
     </LinearLayout>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="灵芝血压计V1.1.1"
-        android:gravity="center"
-        android:textSize="17dp"
-        android:textColor="#000"
         android:layout_marginTop="50dp"
-        />
+        android:gravity="center"
+        android:text="灵芝血压计V1.1.1"
+        android:textColor="#a7a2a2"
+        android:textSize="17dp"/>
 </LinearLayout>

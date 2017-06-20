@@ -82,7 +82,6 @@ public class SimpleDialogg extends Dialog {
         dialog_title.setVisibility(View.GONE);
         icon.setVisibility(View.VISIBLE);
         icon.setBackgroundResource(iconResId);
-
         return this;
     }
 

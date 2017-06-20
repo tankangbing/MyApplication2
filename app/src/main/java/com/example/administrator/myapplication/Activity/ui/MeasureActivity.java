@@ -6,19 +6,24 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.administrator.myapplication.Activity.View.ResultPopupWindow;
 import com.example.administrator.myapplication.Activity.constants.Constants;
 import com.example.administrator.myapplication.Activity.db.MeasureDao;
 import com.example.administrator.myapplication.Activity.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
+
+import android.view.View.OnClickListener;
 
 import java.util.Calendar;
 
@@ -42,6 +47,7 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
     private EditText Remark;
     private Button tvSave;
     private MeasureDao measureDao;
+    ResultPopupWindow menuWindow ;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +66,7 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
         HighHandedTwo = (EditText) findViewById(R.id.edt_height_handedtwo);//高血压
         LowHandedTwo = (EditText) findViewById(R.id.edt_low_handedtwo);//低血压
         PulesTwo = (EditText) findViewById(R.id.edt_pulestwo);//心率
-        Remark = (EditText)findViewById(R.id.edt_remark);
+//        Remark = (EditText)findViewById(R.id.edt_remark);edt_remark
         ivPre = (ImageView)findViewById(R.id.im_pre);
         tvSave = (Button)findViewById(R.id.tv_mreasure_save);
 
@@ -188,7 +194,7 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
         String GetHighHandedTwo = HighHandedTwo.getText().toString();
         String GetLowHandedTwo = LowHandedTwo.getText().toString();
         String getPulesTwo = PulesTwo.getText().toString();
-        String getRemark = Remark.getText().toString();
+//        String getRemark = Remark.getText().toString();
         if(TextUtils.isEmpty(getDay)||TextUtils.isEmpty(getTime)||TextUtils.isEmpty(GetHighHanded)||TextUtils.isEmpty(GetLowHanded)
                 || TextUtils.isEmpty(getPules)|| TextUtils.isEmpty(GetHighHandedTwo)|| TextUtils.isEmpty(GetLowHandedTwo)|| TextUtils.isEmpty(getPulesTwo)){
             Toast.makeText(getApplicationContext(), "信息未填完", Toast.LENGTH_SHORT).show();
@@ -224,10 +230,32 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
         int Hight = (intHighHanded + intHighHandedTwo) / 2;
         int low = (intLowHanded + intLowHandedTwo) / 2;
         int pules = (intPules + intPulesTwo) / 2;
-        for(int i = 0;i<37;i++){
-            measureDao.add(getDay,getTime,Hight+i,low+i,pules+i,getRemark);
-        }
-        finish();
+//        for(int i = 0;i<37;i++){
+        measureDao.add(getDay,getTime,Hight,low,pules,null);
+//        }
+//        finish();
+//        PopupWindow();
     }
+
+//    private void PopupWindow() {
+//        //ResultPopupWindow
+//        menuWindow = new ResultPopupWindow(MeasureActivity.this,onClickListener);
+//       // 设置Popupwindow显示位置（从底部弹出）
+//        menuWindow.showAtLocation(findViewById(R.id.main_view), Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
+//        params = getWindow().getAttributes();
+//        //当弹出Popupwindow时，背景变半透明
+//        params.alpha=0.7f;
+//        getWindow().setAttributes(params);
+//        //设置Popupwindow关闭监听，当Popupwindow关闭，背景恢复1f
+//        menuWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                params = getWindow().getAttributes();
+//                params.alpha=1f;
+//                getWindow().setAttributes(params);
+//            }
+//        });
+//
+//    }
 
 }

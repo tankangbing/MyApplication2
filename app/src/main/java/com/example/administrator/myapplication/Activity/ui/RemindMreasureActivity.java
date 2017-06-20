@@ -28,7 +28,7 @@ import java.util.List;
 
 public class RemindMreasureActivity extends Activity implements View.OnClickListener {
     private ImageButton ibPre;
-    private ImageButton ibCreat;
+    private TextView ibCreat;
 
     private RemindMeasureDao remindMeasureDao;
     public RemindMeasurAdapter remindMeasurAdapter;
@@ -38,6 +38,8 @@ public class RemindMreasureActivity extends Activity implements View.OnClickList
     protected static final int REQ_BLACK_UPDATE = 202;
     public static final String UPDATE = "update";
     private RemindMeasureInfo remindMeasureInfo;
+    private TextView mTvPre;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +52,11 @@ public class RemindMreasureActivity extends Activity implements View.OnClickList
     private void initView() {
         setContentView(R.layout.activity_measure_remind);
         ibPre = (ImageButton)findViewById(R.id.im_mr_pre) ;
-        ibCreat = (ImageButton)findViewById(R.id.im_mr_crea);
+        ibCreat = (TextView)findViewById(R.id.im_mr_crea);
         lvRemindMeasure = (ListView)findViewById(R.id.lv_remind_measure );
+        mTvPre = (TextView)findViewById(R.id.tv_mreasure_remind_pre);
 
+        mTvPre.setOnClickListener(this);
         ibPre.setOnClickListener(this);
         ibCreat.setOnClickListener(this);
     }
@@ -98,6 +102,9 @@ public class RemindMreasureActivity extends Activity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.tv_mreasure_remind_pre:
+                Brack();
+                break;
             case R.id.im_mr_pre:
                Brack();
                 break;

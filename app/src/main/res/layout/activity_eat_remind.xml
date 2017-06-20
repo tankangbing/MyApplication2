@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:background="#f781c3ec"
             style="@style/Titletext"
             android:text="用药提醒"
 
@@ -17,16 +16,17 @@
             style="@style/TitleImage"
             android:src="@drawable/pre"
            />
-        <ImageButton
+        <TextView
+            android:id="@+id/tv_eat_remind_pre"
+            android:text="返回"
+            style="@style/tvBack"
+            android:layout_toRightOf="@id/im_eat_pre"
+            />
+        <TextView
             android:id="@+id/im_eat_crea"
-            android:background="#f781c3ec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/addh"
-            android:clickable="true"/>
+            android:text="添加"
+            style="@style/tvBack"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:text="设置吃药提醒可以帮助您按时吃药"
         android:gravity="center"
         android:textSize="17dp"
-        android:textColor="#2d96df" />
+        android:textColor="#04cea9" />
 
     <ListView
         android:id="@+id/lv_remind_eat"
