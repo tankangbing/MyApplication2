@@ -2,21 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--style="@style/Titletext"-->
+            <!--android:text="个人信息"-->
+            <!--/>-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/im_ge_pre"-->
+            <!--style="@style/TitleImage"-->
+            <!--android:src="@drawable/pre"-->
+            <!--android:onClick="gebacke"/>-->
+
+    <!--</RelativeLayout>-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            style="@style/Titletext"
-            android:text="个人信息"
-            />
-        <ImageButton
-            android:id="@+id/im_ge_pre"
-            style="@style/TitleImage"
-            android:src="@drawable/pre"
-            android:onClick="gebacke"/>
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/Titletext"
+                android:text="个人信息"
+                />
+            <ImageButton
+                android:id="@+id/im_ge_pre"
+                style="@style/TitleImage"
+                android:src="@drawable/pre"
+                android:onClick="gebacke"/>
 
-    </RelativeLayout>
-
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

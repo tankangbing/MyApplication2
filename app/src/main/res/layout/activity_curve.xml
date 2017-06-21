@@ -44,12 +44,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="#fff"
+            android:background="#04cea9"
             android:drawableRight="@drawable/drawer_arrow_down"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
+            android:padding="2dp"
             android:text="早晨(06-08点)"
+            android:textColor="#fff"
             android:textSize="15dp"
             android:clickable="true"/>
     </RelativeLayout>
@@ -72,6 +72,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:paddingLeft="5dp"
+            android:layout_marginRight="10dp"
             android:background="#ffffff"/>
 
         <LinearLayout
@@ -122,6 +123,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:paddingLeft="5dp"
+            android:layout_marginRight="10dp"
             android:background="#ffffff"
             />
         <RelativeLayout
@@ -134,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:background="#04cea9"
+            android:background="@drawable/shape_bottom"
             android:text="上一页"
             android:textColor="#fff"
             android:textSize="15dp"
@@ -145,7 +147,7 @@
             android:id="@+id/te_curve_nextye"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#04cea9"
+            android:background="@drawable/shape_bottom"
             android:text="下一页"
             android:textColor="#fff"
             android:textSize="15dp"

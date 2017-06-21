@@ -345,7 +345,7 @@
             android:layout_height="wrap_content"
             android:text="取消"
             android:textColor="#fff"
-            android:background="#02cea8"  />
+            android:background="@drawable/shape_bottom"  />
         <Button
             android:id="@+id/pp_save"
             android:layout_marginLeft="10dp"
@@ -354,6 +354,6 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:text="保存"
-            android:background="#02cea8"    />
+            android:background="@drawable/shape_bottom"    />
     </LinearLayout>
 </LinearLayout>
