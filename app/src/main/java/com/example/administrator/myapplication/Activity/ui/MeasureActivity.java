@@ -6,7 +6,9 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.administrator.myapplication.Activity.View.ResultDialogg;
 import com.example.administrator.myapplication.Activity.View.ResultPopupWindow;
 import com.example.administrator.myapplication.Activity.constants.Constants;
 import com.example.administrator.myapplication.Activity.db.MeasureDao;
@@ -47,14 +50,40 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
     private EditText Remark;
     private Button tvSave;
     private MeasureDao measureDao;
-    ResultPopupWindow menuWindow ;
+    private GestureDetector mGestureDetector;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measure);
         initView();
         initDate();
+        hua();
+    }
 
+    private void hua() {
+        mGestureDetector=new GestureDetector(this,new GestureDetector.SimpleOnGestureListener(){
+            // 按下去第一点：e1
+            // 快速滑动结束点：e2
+            // velocityX：x轴方向速度
+            // velocityY：y轴方向速度
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                int x1=(int) e1.getX();
+                int x2=(int) e2.getX();
+                if(x1-x2>50){
+                    // 下一页
+//                    Next();
+                    return true;// true：消费
+                }
+
+                if(x2-x1>50){
+                    // 上一页
+//                    Pre();
+                    return true;// true：消费
+                }
+                return super.onFling(e1, e2, velocityX, velocityY);
+            }
+        });
     }
 
     private void initView() {
@@ -230,32 +259,64 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
         int Hight = (intHighHanded + intHighHandedTwo) / 2;
         int low = (intLowHanded + intLowHandedTwo) / 2;
         int pules = (intPules + intPulesTwo) / 2;
+        int i = 0;
+        String remark = null;
+        if(Hight < 90){
+            i = 1;
+            remark = "您的的血压测量值偏低，建议均衡营养，坚持锻炼，改善体质，祝好心情!!!";
+        }else if(Hight >= 90&& Hight <= 130){
+            i = 2;
+            remark = "您的的血压测量值正常，请继续保持当前的健康生活方式，祝好心情!!!";
+        }else if(Hight >130 && Hight <= 140){
+            i = 3 ;
+            remark = "您的的血压测量值正常稍高，请采取的健康生活方式，戒烟限酒，限制钠盐的摄入，加强锻炼。祝好心情!!!";
+        }else if(Hight >140 && Hight <= 159){
+            i = 4;
+            remark = "您的的血压测量值正常偏高，请戒烟限酒，限制钠盐的摄入，加强锻炼。祝好心情!!!";
+        }else if(Hight >159 && Hight <= 179){
+            i = 5;
+            remark = "您的的血压测量值正常过高，请严格调整作息，控制饮食。身体不适，请及时就诊。";
+        }else if(Hight >179){
+            i = 6;
+            remark = "您的的血压测量值严重偏高，请及时就诊，配合治疗。";
+        }
+
 //        for(int i = 0;i<37;i++){
-        measureDao.add(getDay,getTime,Hight,low,pules,null);
+//        measureDao.add(getDay,getTime,Hight,low,pules,null);
 //        }
 //        finish();
-//        PopupWindow();
+        ResultWindow(getDay,getTime,Hight,low,pules,remark,i);
     }
 
-//    private void PopupWindow() {
-//        //ResultPopupWindow
-//        menuWindow = new ResultPopupWindow(MeasureActivity.this,onClickListener);
-//       // 设置Popupwindow显示位置（从底部弹出）
-//        menuWindow.showAtLocation(findViewById(R.id.main_view), Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
-//        params = getWindow().getAttributes();
-//        //当弹出Popupwindow时，背景变半透明
-//        params.alpha=0.7f;
-//        getWindow().setAttributes(params);
-//        //设置Popupwindow关闭监听，当Popupwindow关闭，背景恢复1f
-//        menuWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-//            @Override
-//            public void onDismiss() {
-//                params = getWindow().getAttributes();
-//                params.alpha=1f;
-//                getWindow().setAttributes(params);
-//            }
-//        });
-//
-//    }
-
+    private void ResultWindow(final String getDay, final String getTime, final int hight, final int low, final int pules, final String remark,int i) {
+        final ResultDialogg resultDialogg = new ResultDialogg(MeasureActivity.this,R.style.Theme_dialog);
+        resultDialogg.show();
+        resultDialogg.setDay(getDay);
+        resultDialogg.setTime(getTime);
+        resultDialogg.setHight(hight+"");
+        resultDialogg.setLight(low+"");
+        resultDialogg.setXin(pules+"");
+        resultDialogg.setIdea(remark);
+        resultDialogg.setSet(i);
+        resultDialogg.setcanselClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultDialogg.dismiss();
+//                finish();
+            }
+        });
+        resultDialogg.setSaveClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                measureDao.add(getDay,getTime,hight,low,pules,remark);
+                resultDialogg.dismiss();
+                finish();
+            }
+        });
+    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        mGestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+              android:background="#fff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
               android:id="@+id/pop_layout">
@@ -143,6 +144,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -173,6 +175,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -186,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="理想"
+                android:text="正常"
                 android:textColor="#828282"
                 android:textSize="17dp"/>
         </LinearLayout>
@@ -204,6 +207,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -217,7 +221,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="正常"
+                android:text="偏高"
                 android:textColor="#828282"
                 android:textSize="17dp"/>
         </LinearLayout>
@@ -234,6 +238,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -265,6 +270,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -277,7 +283,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="重度"
+                android:text="中度"
                 android:textColor="#828282"
                 android:textSize="17dp"/>
         </LinearLayout>
@@ -295,6 +301,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:background="#02cea8"
+                android:visibility="gone"
                 />
 
             <TextView
@@ -308,7 +315,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="高度"
+                android:text="重度"
                 android:textColor="#828282"
                 android:textSize="17dp"/>
         </LinearLayout>
@@ -316,6 +323,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/pp_idea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
@@ -323,29 +331,29 @@
         android:textColor="#828282"
         android:layout_marginLeft="10dp"
         android:textSize="15dp"/>
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_marginLeft="10dp"-->
-        <!--android:layout_marginRight="10dp">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
-        <!--<Button-->
-            <!--android:id="@+id/pp_cancel"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="取消"-->
-            <!--android:textColor="#fff"-->
-            <!--android:background="#02cea8"  />-->
-        <!--<Button-->
-            <!--android:id="@+id/pp_save"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="#fff"-->
-            <!--android:text="保存"-->
-            <!--android:background="#02cea8"    />-->
-    <!--</LinearLayout>-->
+        <Button
+            android:id="@+id/pp_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="#fff"
+            android:background="#02cea8"  />
+        <Button
+            android:id="@+id/pp_save"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="保存"
+            android:background="#02cea8"    />
+    </LinearLayout>
 </LinearLayout>

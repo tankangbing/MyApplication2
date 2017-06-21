@@ -134,9 +134,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:background="#c8e3f4"
+            android:background="#04cea9"
             android:text="上一页"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp"
             android:clickable="true"
 
@@ -145,9 +145,9 @@
             android:id="@+id/te_curve_nextye"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#c8e3f4"
+            android:background="#04cea9"
             android:text="下一页"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp"
             android:clickable="true"
 

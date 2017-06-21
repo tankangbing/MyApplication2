@@ -346,7 +346,7 @@
         android:layout_marginTop="12dp"
         android:clickable="true"
         android:gravity="center"
-        android:text="保存"
+        android:text="确认数据"
         android:textSize="20dp"
         android:textColor="#fff"
         android:background="#02cea8"
