@@ -13,13 +13,15 @@
         android:theme="@style/AppTheme"
         android:name=".Activity.been.MyApplication" >
         >
-
-        <activity android:name=".Activity.ui.MainActivity">
+        <activity android:name=".Activity.ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity.ui.MainActivity">
+
         </activity>
 
         <activity android:name=".Activity.ui.MeasureActivity">
