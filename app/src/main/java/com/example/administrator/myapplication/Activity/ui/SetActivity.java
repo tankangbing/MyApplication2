@@ -2,6 +2,7 @@ package com.example.administrator.myapplication.Activity.ui;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -33,6 +34,16 @@ public class SetActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_set);
         initView();
         initData();
+        initEvent();
+    }
+
+    private void initEvent() {
+        //toobsr的兼容
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
 
     private void initData() {

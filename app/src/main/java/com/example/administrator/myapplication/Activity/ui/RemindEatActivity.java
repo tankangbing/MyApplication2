@@ -2,6 +2,7 @@ package com.example.administrator.myapplication.Activity.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
@@ -100,6 +101,12 @@ public class RemindEatActivity extends Activity implements View.OnClickListener{
                 startActivityForResult(intent, EAT_BLACK_UPDATE);
             }
         });
+        //toobsr的兼容
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
 
     @Override

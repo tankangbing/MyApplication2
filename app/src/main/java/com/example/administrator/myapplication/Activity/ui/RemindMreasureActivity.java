@@ -2,6 +2,7 @@ package com.example.administrator.myapplication.Activity.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
@@ -96,7 +97,12 @@ public class RemindMreasureActivity extends Activity implements View.OnClickList
                 startActivityForResult(intent, REQ_BLACK_UPDATE);
             }
         });
-
+        //toobsr的兼容
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
 
     @Override

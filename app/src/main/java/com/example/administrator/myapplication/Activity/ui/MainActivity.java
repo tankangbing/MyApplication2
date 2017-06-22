@@ -1,6 +1,7 @@
 package com.example.administrator.myapplication.Activity.ui;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -22,8 +23,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
        initView();
         initData();
+        initEvent();
     }
-
+        private void initEvent() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
+    }
     private void initData() {
         //hehe
     }

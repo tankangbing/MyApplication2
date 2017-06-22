@@ -3,6 +3,7 @@ package com.example.administrator.myapplication.Activity.ui;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
@@ -57,7 +58,16 @@ public class MeasureActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_measure);
         initView();
         initDate();
+        initEvent();
         hua();
+    }
+
+    private void initEvent() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
 
     private void hua() {

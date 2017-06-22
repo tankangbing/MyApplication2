@@ -3,6 +3,7 @@ package com.example.administrator.myapplication.Activity.ui;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -64,7 +65,12 @@ public class IiActivity extends Activity{
     }
 
     private void initEvent() {
-
+        //toobsr的兼容
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
 
     //------------------------------------------

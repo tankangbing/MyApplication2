@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.GestureDetector;
@@ -78,8 +79,16 @@ public class CurveActivity extends Activity implements View.OnClickListener{
         getAxisXLables();//获取x轴和坐标的标注
         initLineChart();//初始化
         hua();//手划动控制上下页
+        initEvent();
+      }
+    private void initEvent() {
+        //toobsr的兼容
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.colorPrimaryDark);
+        }
     }
-
     private void hua() {
         mGestureDetector=new GestureDetector(this,new GestureDetector.SimpleOnGestureListener(){
             // 按下去第一点：e1
