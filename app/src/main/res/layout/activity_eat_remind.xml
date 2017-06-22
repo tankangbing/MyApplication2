@@ -2,32 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    android:layout_height="match_parent"
+              android:fitsSystemWindows="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            style="@style/Titletext"
-            android:text="用药提醒"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/Titletext"
+                android:text="用药提醒"
 
-            />
-        <ImageButton
-            android:id="@+id/im_eat_pre"
-            style="@style/TitleImage"
-            android:src="@drawable/pre"
-           />
-        <TextView
-            android:id="@+id/tv_eat_remind_pre"
-            android:text="返回"
-            style="@style/tvBack"
-            android:layout_toRightOf="@id/im_eat_pre"
-            />
-        <TextView
-            android:id="@+id/im_eat_crea"
-            android:text="添加"
-            style="@style/tvBack"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+                />
+            <ImageButton
+                android:id="@+id/im_eat_pre"
+                style="@style/TitleImage"
+                android:src="@drawable/pre"
+                />
+            <TextView
+                android:id="@+id/tv_eat_remind_pre"
+                android:text="返回"
+                style="@style/tvBack"
+                android:layout_toRightOf="@id/im_eat_pre"
+                />
+            <TextView
+                android:id="@+id/im_eat_crea"
+                android:text="添加"
+                style="@style/tvBack"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

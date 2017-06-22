@@ -2,21 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    android:layout_height="match_parent"
+              android:fitsSystemWindows="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            style="@style/Titletext"
-            android:text="数据曲线"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/Titletext"
+                android:text="数据曲线"
 
-            />
-        <ImageButton
-            android:id="@+id/im_qu_pre"
-            style="@style/TitleImage"
-            android:src="@drawable/pre"
-             />
-    </RelativeLayout>
+                />
+            <ImageButton
+                android:id="@+id/im_qu_pre"
+                style="@style/TitleImage"
+                android:src="@drawable/pre"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="#04cea9"
+            android:background="@drawable/btn_selector"
             android:drawableRight="@drawable/drawer_arrow_down"
             android:layout_marginRight="20dp"
             android:padding="2dp"
@@ -72,7 +80,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:paddingLeft="5dp"
-            android:layout_marginRight="10dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="20dp"
             android:background="#ffffff"/>
 
         <LinearLayout
@@ -92,7 +101,7 @@
                 android:layout_width="40dp"
                 android:layout_height="1dp"
                 android:layout_gravity="center"
-                android:background="#FFCD41"
+                android:background="#FF1CD3AF"
                 />
 
             <TextView
@@ -106,7 +115,7 @@
                 android:layout_width="40dp"
                 android:layout_height="1dp"
                 android:layout_gravity="center"
-                android:background="#F70399F5"
+                android:background="#FFF2AF3B"
                 />
         </LinearLayout>
 
@@ -123,7 +132,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:paddingLeft="5dp"
-            android:layout_marginRight="10dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="20dp"
             android:background="#ffffff"
             />
         <RelativeLayout
@@ -136,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/shape_bottom"
+            android:background="@drawable/btn_selector"
             android:text="上一页"
             android:textColor="#fff"
             android:textSize="15dp"
@@ -147,7 +157,7 @@
             android:id="@+id/te_curve_nextye"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_bottom"
+            android:background="@drawable/btn_selector"
             android:text="下一页"
             android:textColor="#fff"
             android:textSize="15dp"

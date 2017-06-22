@@ -3,20 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
     android:background="#fff">
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <TextView
-           android:text="血压测量"
-           style="@style/Titletext" />
-       <ImageButton
-           android:id="@+id/im_pre"
-           android:src="@drawable/pre"
-           style="@style/TitleImage" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="血压测量"
+                style="@style/Titletext" />
+            <ImageButton
+                android:id="@+id/im_pre"
+                android:src="@drawable/pre"
+                style="@style/TitleImage" />
+        </RelativeLayout>
 
-
-   </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -356,7 +362,7 @@
         android:text="确认数据"
         android:textSize="20dp"
         android:textColor="#fff"
-        android:background="@drawable/shape_bottom"
+        android:background="@drawable/btn_selector"
         />
 
     <TextView

@@ -161,33 +161,36 @@ public class CurveActivity extends Activity implements View.OnClickListener{
         List<Line> lines = new ArrayList<Line>();
         List<Line> listXin = new ArrayList<Line>();
         //收缩压
-        Line xin = new Line(mPointXin).setColor(Color.parseColor("#FFAA63DA"));  //折线的颜色
+        Line xin = new Line(mPointXin).setColor(Color.parseColor("#FFFF7391"));  //折线的颜色
         xin.setShape(ValueShape.CIRCLE);//折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.SQUARE）
         xin.setCubic(false);//曲线是否平滑
 //	    line.setStrokeWidth(3);//线条的粗细，默认是3
-        xin.setFilled(false);//是否填充曲线的面积
+        xin.setFilled(true);//是否填充曲线的面积
+        xin.setAreaTransparency(12);
         xin.setHasLabels(false);//曲线的数据坐标是否加上备注
         xin.setHasLabelsOnlyForSelected(true);//点击数据坐标提示数据（设置了这个line.setHasLabels(true);就无效）
         xin.setHasLines(true);//是否用直线显示。如果为false 则没有曲线只有点显示
         xin.setHasPoints(true);//是否显示圆点 如果为false 则没有原点只有点显示
         listXin.add(xin);
         //收缩压
-        Line lineHight = new Line(mPointHigt).setColor(Color.parseColor("#FFCD41"));  //折线的颜色
+        Line lineHight = new Line(mPointHigt).setColor(Color.parseColor("#FF1CD3AF"));  //折线的颜色
         lineHight.setShape(ValueShape.CIRCLE);//折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.SQUARE）
         lineHight.setCubic(false);//曲线是否平滑
 //	    line.setStrokeWidth(3);//线条的粗细，默认是3
-        lineHight.setFilled(false);//是否填充曲线的面积
+        lineHight.setFilled(true);//是否填充曲线的面积
+        lineHight.setAreaTransparency(12);
         lineHight.setHasLabels(false);//曲线的数据坐标是否加上备注
         lineHight.setHasLabelsOnlyForSelected(true);//点击数据坐标提示数据（设置了这个line.setHasLabels(true);就无效）
         lineHight.setHasLines(true);//是否用直线显示。如果为false 则没有曲线只有点显示
         lineHight.setHasPoints(true);//是否显示圆点 如果为false 则没有原点只有点显示
         lines.add(lineHight);
         //舒张压
-        Line lineLow = new Line(mPointLow).setColor(Color.parseColor("#F70399F5"));  //折线的颜色
+        Line lineLow = new Line(mPointLow).setColor(Color.parseColor("#FFF2AF3B"));  //折线的颜色
         lineLow.setShape(ValueShape.CIRCLE);//折线图上每个数据点的形状  这里是圆形 （有三种 ：ValueShape.SQUARE  ValueShape.CIRCLE  ValueShape.SQUARE）
         lineLow.setCubic(false);//曲线是否平滑
 //	    line.setStrokeWidth(3);//线条的粗细，默认是3
-        lineLow.setFilled(false);//是否填充曲线的面积
+        lineLow.setFilled(true);//是否填充曲线的面积
+        lineLow.setAreaTransparency(50);
         lineLow.setHasLabels(false);//曲线的数据坐标是否加上备注
         lineLow.setHasLabelsOnlyForSelected(true);//点击数据坐标提示数据（设置了这个line.setHasLabels(true);就无效）
         lineLow.setHasLines(true);//是否用直线显示。如果为false 则没有曲线只有点显示
@@ -200,7 +203,7 @@ public class CurveActivity extends Activity implements View.OnClickListener{
         data.setLines(lines);
         //坐标轴
         axisX = new Axis(); //X轴
-        axisX.setHasTiltedLabels(true);  //X轴下面坐标轴字体是斜的显示还是直的，true是斜的显示
+        axisX.setHasTiltedLabels(false);  //X轴下面坐标轴字体是斜的显示还是直的，true是斜的显示
 //	    axisX.setTextColor(Color.WHITE);  //设置字体颜色
         axisX.setTextColor(Color.parseColor("#D6D6D9"));//灰色
 
@@ -214,11 +217,12 @@ public class CurveActivity extends Activity implements View.OnClickListener{
 
         dataXin.setAxisXBottom(axisX); //x 轴在底部
 //	    data.setAxisXTop(axisX);  //x 轴在顶部
-        axisX.setHasLines(true); //x 轴分割线
+        axisX.setHasLines(false); //x 轴分割线
         //设置Y轴
        axisY = new Axis();  //Y轴
 //        axisY.setName("血压图");//y轴标注
         axisY.setTextSize(11);//设置字体大小
+        axisY.setHasLines(true);//y 轴分割线
         data.setAxisYLeft(axisY);  //Y轴设置在左边
         dataXin.setAxisYLeft(axisY);
         //data.setAxisYRight(axisY);  //y轴设置在右边
@@ -253,11 +257,11 @@ public class CurveActivity extends Activity implements View.OnClickListener{
          */
         Viewport mVChar = new Viewport(lineChart.getMaximumViewport());
         mVChar.left = 0;
-        mVChar.right= 9;
+        mVChar.right= 4;
         lineChart.setCurrentViewport(mVChar);
         Viewport vXin = new Viewport(lineXin.getMaximumViewport());
         vXin.left = 0;
-        vXin.right= 9;
+        vXin.right= 4;
         lineXin.setCurrentViewport(vXin);
 
 //        lineChart.setVerticalFadingEdgeEnabled(false);

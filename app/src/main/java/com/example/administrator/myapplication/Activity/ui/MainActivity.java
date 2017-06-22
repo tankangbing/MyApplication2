@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.administrator.myapplication.Activity.constants.Constants;
@@ -15,7 +16,8 @@ import com.example.administrator.myapplication.Activity.utils.PreferencesUtils;
 import com.example.administrator.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
-    Button btn1, btn2,btn3, btn4,btn5, btn6,btn7, btn8;
+    LinearLayout btn1 ,btn2,btn3, btn4,btn5, btn6,btn7, btn8;
+//    LinearLayout btn1;
     private long exitTime = 0;
 //    Toast tst;
     @Override
@@ -38,14 +40,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private void initView() {
         setContentView(R.layout.activity_main);
-        btn1 = (Button) findViewById(R.id.btn_mreasure);
-        btn2 = (Button) findViewById(R.id.btn_remind);
-        btn3 = (Button) findViewById(R.id.btn_curve);
-        btn4 = (Button) findViewById(R.id.btn_show);
-        btn5 = (Button) findViewById(R.id.btn_set);
-        btn6 = (Button) findViewById(R.id.btn_ii);
-        btn7 = (Button) findViewById(R.id.btn_powerkm);
-        btn8 = (Button) findViewById(R.id.btn_guide);
+        btn1 = (LinearLayout) findViewById(R.id.btn_mreasure);
+        btn2 = (LinearLayout) findViewById(R.id.btn_remind);
+        btn3 = (LinearLayout) findViewById(R.id.btn_curve);
+        btn4 = (LinearLayout) findViewById(R.id.btn_show);
+        btn5 = (LinearLayout) findViewById(R.id.btn_set);
+        btn6 = (LinearLayout) findViewById(R.id.btn_ii);
+        btn7 = (LinearLayout) findViewById(R.id.btn_powerkm);
+        btn8 = (LinearLayout) findViewById(R.id.btn_guide);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);

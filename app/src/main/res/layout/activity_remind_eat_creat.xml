@@ -2,22 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    android:layout_height="match_parent"
+              android:fitsSystemWindows="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_title_eat"
-            style="@style/Titletext"
-            android:text="创建用药提醒"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title_eat"
+                style="@style/Titletext"
+                android:text="创建用药提醒"
 
-            />
-        <ImageButton
-            android:id="@+id/im_er_pre"
-            style="@style/TitleImage"
-            android:src="@drawable/pre"
-            />
-    </RelativeLayout>
+                />
+            <ImageButton
+                android:id="@+id/im_er_pre"
+                style="@style/TitleImage"
+                android:src="@drawable/pre"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/shape_bottom"
+            android:background="@drawable/btn_selector"
             android:text="-"
             android:textSize="25dp"
             android:textColor="#fff"
@@ -97,7 +105,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:text="+"
-            android:background="@drawable/shape_bottom"
+            android:background="@drawable/btn_selector"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textColor="#fff"
@@ -118,7 +126,7 @@
             android:text="取消"
             android:textSize="22dp"
             android:textColor="#fff"
-            android:background="@drawable/shape_bottom"/>
+            android:background="@drawable/btn_selector"/>
 
         <Button
             android:id="@+id/btny_save"
@@ -130,6 +138,6 @@
             android:text="保存"
             android:textSize="22dp"
             android:textColor="#fff"
-            android:background="@drawable/shape_bottom"/>
+            android:background="@drawable/btn_selector"/>
     </LinearLayout>
 </LinearLayout>
