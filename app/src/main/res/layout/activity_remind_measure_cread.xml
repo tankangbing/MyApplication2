@@ -15,7 +15,7 @@
             <TextView
                 android:id="@+id/tv_creatmeasrue"
                 style="@style/Titletext"
-                android:text="创建测量提醒"
+                android:text="添加测量提醒"
 
                 />
             <ImageButton

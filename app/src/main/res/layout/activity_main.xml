@@ -18,15 +18,13 @@
             />
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
     <LinearLayout
         android:id="@+id/btn_mreasure"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
         android:layout_weight="4"
         android:background="@drawable/mearsuer_selector"
         android:gravity="center"
@@ -169,7 +167,8 @@
         android:layout_weight="3"
         android:orientation="horizontal"
         android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="40dp">
         <LinearLayout
             android:id="@+id/btn_ii"
             android:layout_width="0dp"
@@ -241,14 +240,14 @@
                 android:textColor="#fff"/>
         </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="灵芝血压计V1.1.1"
-        android:textColor="#a7a2a2"
-        android:textSize="17dp"/>
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="灵芝血压计"-->
+        <!--android:textColor="#a7a2a2"-->
+        <!--android:textSize="17dp"/>-->
 </LinearLayout>

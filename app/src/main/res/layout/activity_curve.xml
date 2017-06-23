@@ -14,7 +14,7 @@
             android:layout_height="wrap_content">
             <TextView
                 style="@style/Titletext"
-                android:text="数据曲线"
+                android:text="测量图表"
 
                 />
             <ImageButton

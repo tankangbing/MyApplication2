@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:textSize="17dp"
+            android:textSize="20dp"
             android:text="2017-06-11"
             android:textColor="#696969"/>
 
@@ -109,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textSize="17dp"
+            android:textSize="20dp"
             android:text="12:02"
             android:textColor="#696969"/>
     </LinearLayout>
@@ -122,14 +122,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:layout_marginLeft="10dp"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,7 +143,7 @@
                     android:id="@+id/tv_view_hight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
+                    android:textSize="18dp"
                     android:text="120"
                     android:textColor="#ffcd42"/>
             </LinearLayout>
@@ -149,7 +151,8 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -160,14 +163,15 @@
                     android:id="@+id/tv_view_low"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
+                    android:textSize="18dp"
                     android:textColor="#0c9df5"
                     android:text="80"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#aa64da"
-                    android:textSize="17dp"
+                    android:textSize="18dp"
                     android:text="88"/>
             </LinearLayout>
 
@@ -191,7 +195,7 @@
             android:layout_marginLeft="10dp"
             android:padding="10dp"
             android:textColor="#696969"
-            android:textSize="17dp"
+            android:textSize="18dp"
             android:text="医嘱："/>
     </LinearLayout>
 </LinearLayout>
