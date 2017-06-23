@@ -22,6 +22,10 @@ android {
             url "https://jitpack.io"
         }
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
