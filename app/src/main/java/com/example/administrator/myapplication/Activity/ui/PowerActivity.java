@@ -24,7 +24,7 @@ public class PowerActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_power);
         initView();
-        initData();
+//        initData();
         initEvent();
 
     }
@@ -38,7 +38,7 @@ public class PowerActivity extends Activity implements View.OnClickListener{
     }
     private void initView() {
         ibPower = (ImageButton)findViewById(R.id.im_power_pre);
-        mWebView = (WebView) findViewById(R.id.powe_webView);
+//        mWebView = (WebView) findViewById(R.id.powe_webView);
         ibPower.setOnClickListener(this);
     }
 
