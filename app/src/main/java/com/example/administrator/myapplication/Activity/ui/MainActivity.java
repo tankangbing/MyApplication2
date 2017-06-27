@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         btn7.setOnClickListener(this);
         btn8.setOnClickListener(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);//
     }
 
     @Override
