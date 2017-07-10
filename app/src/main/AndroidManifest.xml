@@ -13,44 +13,58 @@
         android:theme="@style/AppTheme"
         android:name=".Activity.been.MyApplication" >
         >
-        <activity android:name=".Activity.ui.SplashActivity">
+        <activity android:name=".Activity.ui.SplashActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.ui.MainActivity">
-
+        <activity android:name=".Activity.ui.MainActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.MeasureActivity"
+                  android:screenOrientation="portrait">
         </activity>
 
-        <activity android:name=".Activity.ui.MeasureActivity">
+        <activity android:name=".Activity.ui.RemindActivity"
+                  android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Activity.ui.RemindMreasureActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.RemindMreasureCreadActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.RemindEatActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.RemindEatCreatActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.CurveActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.GuideActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.IiActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.SetActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.ShowActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.ui.PowerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.ui.AlarmActivity"
+                  android:screenOrientation="portrait"/>
 
-        <activity android:name=".Activity.ui.RemindActivity">
-        </activity>
-        <activity android:name=".Activity.ui.RemindMreasureActivity">
-        </activity>
-        <activity android:name=".Activity.ui.RemindMreasureCreadActivity">
-        </activity>
-        <activity android:name=".Activity.ui.RemindEatActivity">
-        </activity>
-        <activity android:name=".Activity.ui.RemindEatCreatActivity">
-        </activity>
-        <activity android:name=".Activity.ui.CurveActivity">
-        </activity>
-        <activity android:name=".Activity.ui.GuideActivity">
-        </activity>
-        <activity android:name=".Activity.ui.IiActivity">
-        </activity>
-        <activity android:name=".Activity.ui.SetActivity">
-        </activity>
-        <activity android:name=".Activity.ui.ShowActivity">
-        </activity>
-        <activity android:name=".Activity.ui.PowerActivity"/>
-        <activity android:name=".Activity.ui.AlarmActivity"/>
-
-        <receiver android:name=".Activity.Receiver.EatAlarmReceiver">
+        <receiver android:name=".Activity.Receiver.EatAlarmReceiver"
+            >
             <intent-filter>
                 <action android:name="com.eatt.alarm.clock"/>
             </intent-filter>
