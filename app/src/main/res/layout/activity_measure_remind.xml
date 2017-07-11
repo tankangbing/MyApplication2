@@ -33,6 +33,7 @@
                 android:id="@+id/im_mr_crea"
                 android:text="添加"
                 style="@style/tvBack"
+                android:layout_marginRight="10dp"
                 android:layout_alignParentRight="true"
                 />
         </RelativeLayout>

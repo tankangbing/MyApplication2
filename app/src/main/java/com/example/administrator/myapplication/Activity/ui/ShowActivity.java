@@ -163,7 +163,7 @@ public class ShowActivity extends Activity{
                 holder.tvIiHight = (TextView) convertView.findViewById(R.id.tv_view_hight);
                 holder.tvIiLow = (TextView) convertView.findViewById(R.id.tv_view_low);
                 holder.tvIiPules = (TextView) convertView.findViewById(R.id.tv_view_pules);
-                holder.tvIiRemark = (TextView) convertView.findViewById(R.id.tv_view_remark);
+//                holder.tvIiRemark = (TextView) convertView.findViewById(R.id.tv_view_remark);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }

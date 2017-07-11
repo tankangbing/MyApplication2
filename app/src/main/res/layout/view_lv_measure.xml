@@ -30,8 +30,9 @@
                 android:id="@+id/tv_view_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_view_day"
+                android:layout_toRightOf="@id/tv_view_day"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
                 android:text="17:00"
                 android:textColor="#000"
                 android:textSize="17dp"/>
@@ -75,15 +76,15 @@
             android:textColor="#000"
             android:textSize="17dp"/>
 
-        <TextView
-            android:id="@+id/tv_view_remark"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:singleLine="true"
-            android:textColor="#000"
-            android:textSize="17dp"/>
+        <!--<TextView-->
+            <!--android:id="@+id/tv_view_remark"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="17dp"/>-->
     </LinearLayout>
 
 
