@@ -58,14 +58,14 @@ public class PowerActivity extends Activity implements View.OnClickListener{
     }
 
     //点击返回上一页面而不是退出浏览器
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
-            mWebView.goBack();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+//            mWebView.goBack();
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
     @Override
     public void onClick(View v) {

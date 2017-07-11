@@ -171,10 +171,10 @@ public class ShowActivity extends Activity{
             measureInfo = infos.get(position);
             holder.tvIiDay.setText(measureInfo.day+" ");
             holder.tvIiTime.setText(measureInfo.time);
-            holder.tvIiHight.setText(measureInfo.high_handed+"");
+            holder.tvIiHight.setText(measureInfo.high_handed+"/");
             holder.tvIiLow.setText(measureInfo.low_handed+"");
             holder.tvIiPules.setText(measureInfo.pules+"");
-            holder.tvIiRemark.setText("医嘱："+measureInfo.remark);
+//            holder.tvIiRemark.setText("医嘱："+measureInfo.remark);
 
             return convertView;
         }

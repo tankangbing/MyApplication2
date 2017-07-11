@@ -122,7 +122,6 @@ public class SetActivity extends Activity implements View.OnClickListener {
                         // TODO Auto-generated method stub
                     }
                 }).show();//在按键响应事件中显示此对话框
-
     }
 
     //清除所有数据
